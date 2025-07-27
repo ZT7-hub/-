@@ -1,10 +1,105 @@
-<html>
-  <head> 
-    <title>
-      ZT7
-    </title></head>
-  <body>
-       <h1> مرحبا بك في موقع ZT7</h1>
-    
-  </body>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>تحميل الأداة</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Tajawal', sans-serif;
+      background: linear-gradient(135deg, #caa6ff, #5a00b0);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: glitch-bg 3s infinite;
+    }
+
+    @keyframes glitch-bg {
+      0% { background-position: 0 0; }
+      50% { background-position: 100% 100%; }
+      100% { background-position: 0 0; }
+    }
+
+    .glitch-container {
+      text-align: center;
+      background: rgba(0,0,0,0.5);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px #8f00ff99;
+      color: #fff;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .download-btn {
+      background: #ff2d75;
+      border: none;
+      padding: 15px 35px;
+      font-size: 18px;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      box-shadow: 0 0 15px #ff2d7590;
+    }
+
+    .download-btn:hover {
+      transform: scale(1.05);
+      background: #e6005c;
+    }
+
+    /* Glitch lines وهمية */
+    .glitch-line {
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: #ffffff20;
+      animation: glitch-line 2s infinite;
+    }
+
+    @keyframes glitch-line {
+      0% { top: 10%; opacity: 0.2; }
+      25% { top: 30%; opacity: 0.5; }
+      50% { top: 50%; opacity: 0.1; }
+      75% { top: 70%; opacity: 0.6; }
+      100% { top: 90%; opacity: 0.3; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glitch-line"></div>
+
+  <div class="glitch-container">
+    <h1>تحميل اداة حماية الاجهزة</h1>
+    <button class="download-btn">تحميل مباشر</button>
+  </div>
+
+  <script>
+    function prankUser() {
+      alert("تم اختراق جهازك\n\nيحاول المخترق الوصول إلى البيانات...");
+      const fart = new Audio("https://www.myinstants.com/media/sounds/fart-with-reverb.mp3");
+      fart.play();
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const downloadBtns = document.querySelectorAll(".download-btn");
+      downloadBtns.forEach(btn => {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          prankUser();
+        });
+      });
+    });
+  </script>
+
+</body>
 </html>
